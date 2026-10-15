@@ -1,45 +1,115 @@
-# DipoPython_TPFinal
+# Veterinary Management
 
-## Table of contents
-- [Overview](#overview)
-  - [The challenge](#the-challenge)
-  - [Screenshot](#screenshot)
-- [My process](#my-process)
-  - [Built with](#built-with)
-  - [Useful resources](#useful-resources)
-- [Author](#author)
+## Abstract
 
-## Overview
-TP Final de la Diplomatura en Python cursada en UTN BA
+Veterinary Management is a desktop application developed in Python to manage veterinary patient records. It includes CRUD operations, input validation, record sorting, and a graphical user interface built with Tkinter. The application uses SQLite for data storage and implements Object-Oriented Programming, the Model-View-Controller (MVC) architectural pattern, decorators, and the Observer design pattern.
 
-### The challenge
-Este trabajo fue creado a partir de tres niveles de cursada.
-Nivel 1: Crear una app que contenga un ABM con toma de datos de teclado, utilizando SQLite3 y regex para validación de al menos un dato.
-Nivel 2: La app debe usarse según el paradigma POO, se debe implementar MVC, agregar excepciones y documentar con Sphinx
-Nivel 3: Agregar Decoradores y patrón observador. Además, implementar un servidor para generar un registro de log con la información que llega desde un cliente.
-### Screenshot
-![](screenshot/captura1.png)
-Para agregar se debe elejir una fila y luego click en actualizar, por eso se desactiva el botón de Agregar
-![](screenshot/captura-actualizar.png)
+## Descripción
 
-### Links
-- URL: [Github](https://github.com/eseoxalde/DipoPython_TPFinal)
+Proyecto personal desarrollado como trabajo final de la Diplomatura en Python de la Universidad Tecnológica Nacional, Facultad Regional Buenos Aires (UTN BA).
 
-## My process
-Por facilidad, decidí hacer un abm de pacientes de una veterinaria, con 4 datos de entrada: nombre, tipo, raza y peso. El nombre es obligatorio y se valida que comience con mayúscula, el peso no es obligatorio pero se valida que sea un número.
+La aplicación permite gestionar pacientes de una veterinaria mediante una interfaz gráfica, con operaciones de alta, modificación y eliminación de registros.
 
-### Built with
-Python3
-Se pretende cumplir con pep8
-Interfaz creada con Tkinter
-Documentación con Sphinx
+## Tecnologías
 
-### Useful resources
-- [Python pep8](https://peps.python.org/pep-0008/) - Página oficial de pep8
-- [Python tkinter](https://guia-tkinter.readthedocs.io/es/develop/chapters/5-basic/5.1-Intro.html) - Guía de tkinter
-- [Python Sphinx] (https://www.sphinx-doc.org/en/master/) - Guía de Sphinx
+- Python 3
+- Tkinter
+- SQLite3
+- Expresiones regulares (`re`)
+- Programación Orientada a Objetos (POO)
+- Patrón arquitectónico MVC
+- Decoradores
+- Patrón de diseño Observer
+- Sphinx
+- PEP 8
 
-## Author
-- Linkedin - [eseoxalde](https://www.linkedin.com/in/eseoxalde/)
-- Github - [eseoxalde](https://github.com/eseoxalde)
+## Modo de uso
 
+### Requisitos
+
+- Python 3.
+- Tkinter.
+- SQLite3, incluido en la mayoría de las instalaciones estándar de Python.
+
+### Instalación
+
+Clonar el repositorio:
+
+```bash
+git clone https://github.com/eseoxalde/veterinary-management.git
+cd veterinary-management
+```
+
+### Ejecución
+
+Ejecutar el siguiente comando:
+
+```bash
+python3 controlado.py
+```
+
+### Operaciones disponibles
+
+- **Agregar:** registra un paciente con nombre, tipo, raza y peso.
+- **Actualizar:** permite seleccionar un registro, cargar sus datos en el formulario y modificarlo.
+- **Eliminar seleccionado:** elimina el registro seleccionado.
+- **Ordenar:** permite ordenar los registros por nombre o tipo.
+- **Limpiar formulario:** limpia el formulario para cargar otro paciente.
+
+El nombre es obligatorio y debe comenzar con mayúscula. El peso es opcional, pero debe ser numérico cuando se ingresa.
+
+## Contexto académico
+
+Este proyecto corresponde al trabajo práctico final de la Diplomatura en Python cursada en UTN BA. La consigna estaba organizada en tres niveles.
+
+### Nivel 1: Aplicación básica
+
+- Crear una aplicación con operaciones ABM (alta, baja y modificación) y consulta de registros.
+- Capturar datos ingresados por teclado.
+- Utilizar SQLite3 para almacenar información.
+- Validar al menos un dato mediante expresiones regulares.
+
+### Nivel 2: Programación Orientada a Objetos
+
+- Aplicar el paradigma de Programación Orientada a Objetos.
+- Implementar el patrón MVC.
+- Incorporar manejo de excepciones.
+- Documentar el proyecto con Sphinx.
+
+### Nivel 3: Patrones de diseño y comunicación cliente-servidor
+
+- Implementar decoradores.
+- Incorporar el patrón Observer.
+- Implementar un servidor que genere registros de log con información recibida desde un cliente.
+
+## Capturas de pantalla
+
+### Interfaz principal
+
+![Interfaz principal](screenshot/principal.png)
+
+### Actualización de registros
+
+![Actualización de registros](screenshot/fila-seleccionada.png)
+
+Al seleccionar un registro para modificarlo, el botón «Agregar» se deshabilita para evitar altas accidentales. Para guardar los cambios se utiliza el botón «Actualizar».
+
+## Recursos útiles
+
+- [PEP 8 – Guía de estilo para Python](https://peps.python.org/pep-0008/)
+- [Guía de Tkinter](https://guia-tkinter.readthedocs.io/es/develop/chapters/5-basic/5.1-Intro.html)
+- [Documentación de Sphinx](https://www.sphinx-doc.org/en/master/)
+- [Documentación de SQLite3](https://docs.python.org/es/3/library/sqlite3.html)
+- [Documentación de expresiones regulares](https://docs.python.org/es/3/library/re.html)
+
+## Autor
+
+**Ese Kai Oxalde**
+
+- GitHub: [@eseoxalde](https://github.com/eseoxalde)
+- LinkedIn: [eseoxalde](https://linkedin.com/in/eseoxalde/)
+
+## Licencia
+
+Este proyecto está distribuido bajo la licencia MIT. Consultá el archivo [LICENSE](LICENSE
+) para más información.
