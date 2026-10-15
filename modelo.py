@@ -167,9 +167,7 @@ class Abm(Sujeto):
         """
         patron_peso = re.compile(r"[^0-9]")
         if nombre == "":
-            messagebox.showerror(
-                "ERROR", "Primero seleccione un elemento con el boton 'Ver Fila'"
-            )
+            messagebox.showerror("ERROR", "Primero seleccione un elemento")
         elif re.match(patron_peso, peso):
             messagebox.showerror("ERROR", "El peso debe ser un número")
         else:
@@ -191,20 +189,28 @@ class Abm(Sujeto):
 
     def ver_todo(self, tree):
         """
-        Realiza una búsqueda de todos los registos de la base de datos y actualiza el treeview.
-
-        :param tree: el treeview
-        :returns: nueva vista en treeview ordenada por tipo
+        Busca todos los registros de la base de datos y actualiza
+        el Treeview ordenado por tipo, sin distinguir mayúsculas
+        y minúsculas.
         """
         self.limpiar_treeview(tree)
+
         con = self.conexion()
         cursor = con.cursor()
-        sql = "SELECT * FROM animales ORDER BY tipo ASC;"
+
+        sql = "SELECT * FROM animales ORDER BY tipo COLLATE NOCASE ASC;"
         cursor.execute(sql)
         filas = cursor.fetchall()
+
         for row in filas:
-            print(row)
-            tree.insert("", "end", text=row[0], values=(row[1], row[2], row[3], row[4]))
+            tree.insert(
+                "",
+                "end",
+                text=row[0],
+                values=(row[1], row[2], row[3], row[4]),
+            )
+
+        con.close()
 
     def ver_orden_nombre(self, tree):
         """

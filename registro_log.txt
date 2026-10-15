@@ -1,1 +1,11 @@
-2023-11-25 11:25:16 - Se ha ingresado un nuevo registro
+2026-10-15 13:02:08 - Se ha ingresado un nuevo registro
+2026-10-15 13:02:37 - Se ha ingresado un nuevo registro
+2026-10-15 13:02:49 - Se ha ingresado un nuevo registro
+2026-10-15 13:05:26 - Se ha ingresado un nuevo registro
+2026-10-15 13:05:30 - Se ha ingresado un nuevo registro
+2026-10-15 13:05:54 - Se ha ingresado un nuevo registro
+2026-10-15 13:06:12 - Se ha ingresado un nuevo registro
+2026-10-15 13:06:18 - Se ha ingresado un nuevo registro
+2026-10-15 13:06:28 - Se ha ingresado un nuevo registro
+2026-10-15 13:10:23 - Se ha eliminado un registro
+2026-10-15 13:11:08 - Se ha actualizado el registro
